@@ -93,3 +93,12 @@
     # get image locally
     docker pull image_name:tag
     ```
+- Volumes and data
+    1. Types of data:
+        * Application (code+environment)
+        * Temporary app data since it's read write it's stored in containers not images.
+        * Permanent App data(Volumes)
+    2. Volumes are folders on your host machine hard drive, which are mounted(mapped) into containers
+    ```bash
+    docker run -d -p 3000:80 --rm --name feedback-app feedback-node:volumes
+    ```
